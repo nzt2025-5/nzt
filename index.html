@@ -10,7 +10,53 @@
 </head>
 
 <body>
-    <h1>Hallo Nationaler Zukunftstag <br> Mädchen-Informatik-los!</h1>
+    <main class="gallery-wrap">
+        <h1>wilkommen <br> zum einfach zeichnen</h1>
+
+        <div class="gallery" aria-label="Tiere-Galerie">
+            <a href="dackel.png"><img src="dackel.png" alt="Dackel"></a>
+            <a href="oktopus.png"><img src="oktopus.png" alt="Oktopus"></a>
+            <a href="affe.png"><img src="affe.png" alt="Affe"></a>
+            <a href="bär.png"><img src="bär.png" alt="Bär"></a>
+            <a href="delfin.png"><img src="delfin.png" alt="Delfin"></a>
+            <a href="uhu.png"><img src="uhu.png" alt="Eule"></a>
+            <a href="hirsch.png"><img src="hirsch.png" alt="Hirsch"></a>
+            <a href="wolf.png"><img src="wolf.png" alt="Wolf"></a>
+            <a href="pferd.png"><img src="pferd.png" alt="Pferd"></a>
+            <a href="otter.png"><img src="otter.png" alt="Otter"></a>
+            <a href="jaguar.png"><img src="jaguar.png" alt="Jaguar"></a>
+            <a href="steinbock.png"><img src="steinbock.png" alt="Steinbock"></a>
+            <a href="esel.png"><img src="esel.png" alt="Esel"></a>
+            <a href="katze.png"><img src="katze.png" alt="Katze"></a>
+            <a href="schmetterling.png"><img src="schmetterling.png" alt="Schmetterling"></a>
+        </div>
+    </main>
+    <dialog class="image-viewer" aria-label="Bildansicht">
+        <button class="image-viewer__close" type="button" aria-label="Bildansicht schliessen">&times;</button>
+        <img alt="">
+    </dialog>
+    <script>
+        const imageViewer = document.querySelector(".image-viewer");
+        const viewerImage = imageViewer.querySelector("img");
+
+        document.querySelector(".gallery").addEventListener("click", (event) => {
+            const link = event.target.closest("a");
+            if (!link) return;
+
+            event.preventDefault();
+            viewerImage.src = link.href;
+            viewerImage.alt = link.querySelector("img").alt;
+            imageViewer.showModal();
+        });
+
+        imageViewer.querySelector(".image-viewer__close").addEventListener("click", () => {
+            imageViewer.close();
+        });
+
+        imageViewer.addEventListener("click", (event) => {
+            if (event.target === imageViewer) imageViewer.close();
+        });
+    </script>
 </body>
 
 </html>

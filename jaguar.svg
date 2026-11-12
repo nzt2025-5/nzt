@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Jaguar</title>
+  <desc id="desc">A stylized jaguar illustration.</desc>
+  <defs>
+    <linearGradient id="fur" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eab45d"/>
+      <stop offset="100%" stop-color="#c76b1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="#f4e0b1"/>
+  <ellipse cx="165" cy="120" rx="110" ry="72" fill="url(#fur)"/>
+  <path d="M92 90 L68 62 L110 58 L120 76 Z" fill="#4b2d1f"/>
+  <path d="M236 90 L262 62 L212 58 L202 76 Z" fill="#4b2d1f"/>
+  <circle cx="130" cy="108" r="10" fill="#1f1a17"/>
+  <circle cx="200" cy="108" r="10" fill="#1f1a17"/>
+  <circle cx="127" cy="105" r="3" fill="#fff"/>
+  <circle cx="197" cy="105" r="3" fill="#fff"/>
+  <path d="M160 112 L175 120 L160 128 L145 120 Z" fill="#1a120f"/>
+  <path d="M122 136 Q160 152 198 136" fill="none" stroke="#1a120f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M92 118 Q52 132 68 160 Q92 170 114 152" fill="#c76b1c" opacity=".85"/>
+  <path d="M236 118 Q282 132 268 160 Q242 170 218 152" fill="#c76b1c" opacity=".85"/>
+  <g fill="#1a120f">
+    <circle cx="93" cy="92" r="8"/>
+    <circle cx="235" cy="92" r="8"/>
+    <circle cx="118" cy="70" r="8"/>
+    <circle cx="202" cy="70" r="8"/>
+    <circle cx="150" cy="64" r="8"/>
+    <circle cx="175" cy="64" r="8"/>
+  </g>
+  <g fill="#f7c063">
+    <circle cx="115" cy="98" r="5"/>
+    <circle cx="205" cy="98" r="5"/>
+    <circle cx="155" cy="88" r="6"/>
+    <circle cx="170" cy="88" r="6"/>
+  </g>
+</svg>

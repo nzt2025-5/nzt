@@ -9,13 +9,86 @@ body {
   min-height: 100dvh;
   display: grid;
   place-items: center;
-  background: Canvas;
-  color: CanvasText;
+  background: linear-gradient(
+    135deg,
+    #ffb3ba 0%,
+    #ffdfba 16.7%,
+    #ffffba 33.3%,
+    #baffc9 50%,
+    #bae1ff 66.7%,
+    #d7baff 83.3%,
+    #ffb3ba 100%
+  );
+  color: #111827;
+}
+
+.gallery-wrap {
+  padding: 2rem 1.5rem 3rem;
+  text-align: center;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 650;
-  margin: 0;
+  margin: 0 0 1.5rem;
   text-align: center;
+  text-transform: lowercase;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  justify-self: center;
+  border-radius: 1rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.gallery a {
+  cursor: zoom-in;
+}
+
+.image-viewer {
+  position: fixed;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  padding: 3rem 1rem 1rem;
+  border: 0;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.image-viewer::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.image-viewer img {
+  display: block;
+  width: auto;
+  max-width: min(90vw, 1000px);
+  max-height: 85dvh;
+}
+
+.image-viewer__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #111827;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
 }
